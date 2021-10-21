@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  release:
+    types:
+      - created
+jobs:
+  build-osx:    
+    runs-on: macos-10.15
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: homebrew-robotraconteur
+    - name: build robotraconteur
+      run: brew install --formula Formula/robotraconteur.rb
+      working-directory: homebrew-robotraconteur
+
+    
