@@ -50,7 +50,7 @@ def main():
 
     print(tarball_sha256)
     
-    homebrew_ver =  tag_name_r.group(1) + tag_name_r.group(2)
+    homebrew_ver =  tag_name_r.group(1) + (tag_name_r.group(2) or "")
     
     formula_rb2 = re.sub(r"(\surl\s+)([^\s]+)",f"\\g<1>\"{tarball_url}\"", formula_rb)
     formula_rb3 = re.sub(r'(\ssha256\s+)("[A-Za-z0-9]+")',f"\\g<1>\"{tarball_sha256}\"", formula_rb2)
