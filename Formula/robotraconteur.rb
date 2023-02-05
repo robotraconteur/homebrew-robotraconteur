@@ -9,7 +9,7 @@ class Robotraconteur < Formula
   depends_on "openssl"
 
   def install
-    system "cmake", ".", "-DCMAKE_CXX_STANDARD=11", "-DBUILD_GEN=ON", "-DBoost_USE_STATIC_LIBS=ON",
+    system "cmake", ".", "-DBUILD_GEN=ON", "-DBoost_USE_STATIC_LIBS=ON",
            "-DOPENSSL_USE_STATIC_LIBS=ON", "-DCMAKE_BUILD_TYPE=Release", *std_cmake_args
     system "make", "install"
   end
