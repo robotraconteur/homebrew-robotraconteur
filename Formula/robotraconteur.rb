@@ -1,8 +1,8 @@
 class Robotraconteur < Formula
   desc "Robot Raconteur: communication framework for robotics"
   homepage "https://robotraconteur.com"
-  url "https://github.com/robotraconteur/robotraconteur/archive/v1.1.1.tar.gz"
-  sha256 "cb10ab7dd7d4416187aa985afbbf0ee23feb520cb00781fd4f93fc5f063f9832"
+  url "https://github.com/robotraconteur/robotraconteur/archive/v1.2.0.tar.gz"
+  sha256 "d5c07c482a1002459adbad573f3d34e173654841b2db886bb00f96e572fc8274"
   head "https://github.com/robotraconteur/robotraconteur.git"
   depends_on "cmake" => :build
   depends_on "boost"
