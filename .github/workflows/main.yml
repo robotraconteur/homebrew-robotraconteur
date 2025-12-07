@@ -14,7 +14,7 @@ jobs:
       with:
         path: homebrew-robotraconteur
     - name: build robotraconteur
-      run: brew install --formula Formula/robotraconteur.rb
+      run: brew install --formula ./Formula/robotraconteur.rb
       working-directory: homebrew-robotraconteur
 
     
