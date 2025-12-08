@@ -12,5 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: build robotraconteur
-      run: brew install --formula Formula/robotraconteur.rb
+      run: |
+        brew tap robotraconteur/local $GITHUB_WORKSPACE
+        brew install robotraconteur/local/robotraconteur
     
