@@ -11,10 +11,9 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        path: homebrew-robotraconteur
     - name: build robotraconteur
-      run: brew install --formula ./Formula/robotraconteur.rb
-      working-directory: homebrew-robotraconteur
+      run: |
+        brew tap robotraconteur/local $GITHUB_WORKSPACE
+        brew install robotraconteur/local/robotraconteur
 
     
